@@ -6,7 +6,7 @@ const initialState = {
   errors: { SignIn: null, SignUp: null, PasswordRecover: null }
 };
 
-export const SignIn05BlueprintReducer = (state = initialState, action) => {
+export default SignIn05BlueprintReducer = (state = initialState, action) => {
   switch (action.type) {
     case actions.EMAIL_AUTH_LOGIN_SUCCESS:
       return { ...state, accessToken: action.accessToken, errors: { SignIn: 'Login success' } };

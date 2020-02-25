@@ -40,7 +40,7 @@ echo "create blueprint folder"
 mkdir -p $BASE_PATH/src/features/$BLUEPRINT
 
 echo "copy"
-cp -r ./$BLUEPRINT/. $BASE_PATH/src/features/$BLUEPRINT
+cp -r ./SignIn05Blueprint/. $BASE_PATH/src/features/$BLUEPRINT
 
 echo ">> insert 1" 
 sed -i "s/${EXT_POINT_1}/&\n${DATA_1}/g" $BASE_PATH/src/config/installed_blueprints.js
@@ -54,7 +54,7 @@ sed -i "s/${EXT_POINT_3}/&\n${DATA_3}/g" $BASE_PATH/src/navigator/mainNavigator.
 
 EXT_POINT_5="@BlueprintReduxImportInsertion"
 EXT_POINT_6="@BlueprintReduxCombineInsertion"
-DATA_5="import { ${BLUEPRINT}Reducer } from '..\/features\/${BLUEPRINT}\/redux\/reducers'"
+DATA_5="import ${BLUEPRINT}Reducer from '..\/features\/${BLUEPRINT}\/redux\/reducers'"
 DATA_6="${BLUEPRINT}: ${BLUEPRINT}Reducer,"
 
 echo ">> insert 5"
