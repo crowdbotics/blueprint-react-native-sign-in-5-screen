@@ -45,7 +45,7 @@ sed -i "/${DATA_2}/d" $BASE_PATH/src/navigator/mainNavigator.js
 echo ">> remove 3"
 sed -i "/${DATA_3}/d" $BASE_PATH/src/navigator/mainNavigator.js
 
-DATA_5="import { ${BLUEPRINT}Reducer } from '..\/features\/${BLUEPRINT}\/redux\/reducers'"
+DATA_5="import ${BLUEPRINT}Reducer from '..\/features\/${BLUEPRINT}\/redux\/reducers'"
 DATA_6="${BLUEPRINT}: ${BLUEPRINT}Reducer,"
 
 echo ">> remove 5"
